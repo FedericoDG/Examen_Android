@@ -36,12 +36,10 @@ public class BuscarProductoFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(BuscarProductoViewModel.class);
 
         viewModel.getMutableMensajeError().observe(getViewLifecycleOwner(), mensaje -> {
-            if (mensaje != null && !mensaje.isEmpty()) {
-                binding.tvMensaje.setText(mensaje);
-                binding.tvMensaje.setTextColor(
-                        ContextCompat.getColor(requireContext(), android.R.color.holo_red_dark)
-                );
-            }
+            binding.tvMensaje.setText(mensaje);
+            binding.tvMensaje.setTextColor(
+                    ContextCompat.getColor(requireContext(), android.R.color.holo_red_dark)
+            );
         });
 
         viewModel.getMutableProducto().observe(getViewLifecycleOwner(), producto -> {

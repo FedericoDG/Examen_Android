@@ -47,7 +47,7 @@ public class BuscarProductoViewModel extends AndroidViewModel {
             mProducto.setValue(null);
         }
     }
-
+    
     void clearMensajeError() {
         if (mMensajeError != null) {
             mMensajeError.setValue("");
